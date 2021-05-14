@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup Page</title>
+	<!-- Bootstrap core CSS -->
+	<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="{% static 'css/shop-homepage.css' %}" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+	<div class="wrapper fadeInDown">
+	  <div id="formContent">
+	    <!-- Tabs Titles -->
+	    <h2 class="inactive underlineHover">Sign Up </h2>
+
+	    <!-- Signup Form -->
+	    <form method="post">
+			{% csrf_token %}
+				Enter FirstName: <input type="text" id="firstname" class="fadeIn second" name="fname" placeholder="FirstName"><br>
+				Enter LastName: <input type="text" id="lastname" class="fadeIn third" name="lname" placeholder="LastName"><br>
+				Enter UserName: <input type="text" id="username" class="fadeIn fourth" name="uname" placeholder="UserName"><br>
+				Enter Email: <input type="text" id="email" class="fadeIn seventh" name="email" placeholder="Email"><br>
+				Enter Mobile: <input type="tel" maxlength="10" id="mobile" class="fadeIn sixth" name="mob" placeholder="Mobile Number"><br>
+				Enter Password: <input type="Password" id="password" class="fadeIn fifth" name="pwd" placeholder="Password"><br>
+
+				Select UserType: <select name="utype">
+					<option value="buyer">Buyer</option>
+					<option value="seller">Seller</option>
+	      <input type="submit" class="fadeIn eigth" value="Register">
+	    </form>
+	  </div>
+	</div>
+</body>
+</html>
